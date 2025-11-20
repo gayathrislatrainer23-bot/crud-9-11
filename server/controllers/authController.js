@@ -3,11 +3,11 @@ const bcrypt = require('bcrypt')
 const jwt = require("jsonwebtoken")
 const register =  async (req,res,next)=>{
 
-    const {name,email,password} =req.body
-    console.log(req.body)
+  console.log(req.body)
+    const {name,email,password} = req.body
+    try{
   const existingUser=  await User.findOne({email:email})
-try{
-
+  console.log(existingUser)
   if(existingUser){
          res.status(400).json({
           message:"you are already exist as user"
