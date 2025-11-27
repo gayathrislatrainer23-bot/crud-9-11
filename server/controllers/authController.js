@@ -1,6 +1,7 @@
 const User  = require('../models/userModel')
 const bcrypt = require('bcrypt')
 const jwt = require("jsonwebtoken")
+
 const register =  async (req,res,next)=>{
 
   console.log(req.body)
@@ -53,6 +54,7 @@ const login = async (req,res, next)=>{
   {
     sucess: true,
     message:"Login sucess",
+    user,
     token
   }
   )

@@ -5,6 +5,7 @@ const cors = require('cors')
 const connectDB = require("./config/db")
 
 const authRouter  = require("./routes/authRouter")
+const userRouter  = require("./routes/userRouter")
 dotenv.config()
 
 app.use(express.json())
@@ -23,6 +24,8 @@ app.get("/", (req,res)=> {
 )
 
 app.use('/auth',authRouter )
+app.use('/user',userRouter )
+
 const PORT = process.env.PORT
 
 app.listen(PORT, ()=>{console.log(`server is running the port ${PORT} `)})
