@@ -18,9 +18,9 @@ const formData = {
         email:email,
         password: password
     }
-    console.log(formData)
+    // console.log(formData)
 try{
-console.log(api)
+// console.log(api)
    const response= await api.post("/auth/login",formData )
   
  if( response.data.sucess){

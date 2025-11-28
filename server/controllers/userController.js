@@ -13,7 +13,6 @@ console.log(err)
 
 }
 
-
 module.exports ={
 getProfile
 }

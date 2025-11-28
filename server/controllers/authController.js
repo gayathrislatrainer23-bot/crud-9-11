@@ -43,8 +43,8 @@ const login = async (req,res, next)=>{
           message:"you are not a user, pls register"
          })
   }
-  console.log(user)
-  console.log(user.password, "p")
+  // console.log(user)
+  // console.log(user.password, "p")
   const match  = await bcrypt.compare(password,user.password)
   if(!match) res.status(400).json({message: " password invalid"})
     const token = await jwt.sign({email:email},process.env.jwtsecretcode,{
